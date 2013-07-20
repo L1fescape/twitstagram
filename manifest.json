@@ -1,0 +1,17 @@
+{
+  "manifest_version" : 2,
+  "name" : "Twitstagram",
+  "description" : "Instagram photos inside your Twitter feed. Hidden by default, visible when a tweet is expanded.",
+  "version" : "0.1",
+  "permissions" : ["http://*.twitter.com/", "https://*.twitter.com/"],
+  "content_scripts": [{
+    "matches": ["http://*.twitter.com/", "https://*.twitter.com/"], 
+    "js": [
+      "scripts/main.js"
+    ]
+  }],
+  "icons" : {
+    "48" : "icons/48.png",
+    "128" : "icons/128.png"
+  }
+}
