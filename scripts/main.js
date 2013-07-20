@@ -2,16 +2,10 @@
 var script = document.createElement('script');
 
 function twitstagramClosure() {
-  // save current console.log for later (twitter overrides it)
-  // won't need it though when in production.
-  window.log = console.log;
   // twitter doesn't load all tweets at once, so we need to re-bind
   // click events as more tweets are loaded.
   // TODO: better method of re-binding than setInterval
   setInterval(function() { 
-    // reapply the normal console log (only needs to happen once after twitter does
-    // its thing, but whatevs)
-    console.log = window.log;
     // unbind all clicks twistagram applies (twitter has it's own binding system,
     // so this unbind doesn't break anything. if there are other extensions running 
     // on the page however, it might break those. TODO better binding)
