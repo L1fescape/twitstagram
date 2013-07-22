@@ -26,7 +26,7 @@ function twitstagramClosure() {
 
   // once dependencies have been loaded, set bindings
   ready(function() {
-    $('#page-container').on('click', '.expanding-stream-item', function(e) {
+    $('body').on('click', '.expanding-stream-item', function(e) {
       var urlInTweet = $(this).find(".js-display-url").html();
       // check if there's a url in the tweet, it contains a link to instagram, and that
       // instagram picture hasn't already been added.

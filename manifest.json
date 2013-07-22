@@ -2,10 +2,10 @@
   "manifest_version" : 2,
   "name" : "Twitstagram",
   "description" : "Instagram photos inside your Twitter feed. Same behavior as a picture through pic.twitter.com, Vine, etc.",
-  "version" : "0.1.2",
-  "permissions" : ["http://*.twitter.com/", "https://*.twitter.com/"],
+  "version" : "0.1.3",
+  "permissions" : ["http://*.twitter.com/*", "https://*.twitter.com/*"],
   "content_scripts": [{
-    "matches": ["http://*.twitter.com/", "https://*.twitter.com/"], 
+    "matches": ["http://*.twitter.com/*", "https://*.twitter.com/*"], 
     "js": [
       "scripts/main.js"
     ]
